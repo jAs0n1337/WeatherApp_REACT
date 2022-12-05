@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import './Weather.css'
-import key from "../key.json"
 
 
 function Weather() {
@@ -10,7 +9,7 @@ function Weather() {
     console.log(weatherData);
 
     useEffect(() => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${key.APIkey}&units=metric`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${country}&appid=${process.env.REACT_APP_API_KEY}&units=metric`)
             .then((res) => res.json())
             .then((data) => {
                 setWeatherData(data);
