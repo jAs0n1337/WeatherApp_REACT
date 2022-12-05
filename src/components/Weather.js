@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import './Weather.css'
 import key from "../key.json"
 
-// const key = "b319a77fb8e4fe01a5b2b5cbdab2669f";
 
 function Weather() {
     const [weatherData, setWeatherData] = useState();
